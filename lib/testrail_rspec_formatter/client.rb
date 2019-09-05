@@ -91,7 +91,7 @@ module TestrailRspecFormatter
         end
         ex = APIError.new('TestRail API returned HTTP %s (%s)' % [response.code, error])
         ex.code = response.code.to_i
-        raise
+        raise ex
       end
 
       result
